@@ -59,3 +59,17 @@ function toggleMute() {
 		videoPlayer.muted = true;
 	}
 }
+
+function resetPlayer() {
+	videoPlayer.currentTime = 0;
+
+	var playPauseButton = document.getElementById('play-pause-button');
+
+	setButtonType(playPauseButton, 'pause')
+}
+
+function replayVideo() {
+	resetPlayer();
+
+	videoPlayer.play();
+}
