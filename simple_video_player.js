@@ -6,6 +6,8 @@ function initVideoPlayer() {
 	videoPlayer = document.getElementById('media-video');
 
 	videoPlayer.controls = false;
+
+	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
 }
 
 function setButtonType(button, value) {
@@ -66,10 +68,26 @@ function resetPlayer() {
 	var playPauseButton = document.getElementById('play-pause-button');
 
 	setButtonType(playPauseButton, 'pause')
+
+	var progressBar = document.getElementById('progress-bar');
+
+	progressBar.value = 0;
+
+	progressBar.innerHTML = '0% played';
 }
 
 function replayVideo() {
 	resetPlayer();
 
 	videoPlayer.play();
+}
+
+function updateProgressBar() {
+	var progressBar = document.getElementById('progress-bar');
+
+	var percentage = Math.floor((100 / videoPlayer.duration) * videoPlayer.currentTime);
+
+	progressBar.value = percentage;
+
+	progressBar.innerHTML = percentage + '% played';
 }
