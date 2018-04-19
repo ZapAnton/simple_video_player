@@ -35,3 +35,13 @@ function stopPlayer() {
 
 	videoPlayer.currentTime = 0;
 }
+
+function changeVolume(direction) {
+	if (direction === '+') {
+		videoPlayer.volume += (videoPlayer.volume != 1) ? 0.1 : 0;
+	} else {
+		videoPlayer.volume -= (videoPlayer.volume != 0) ? 0.1 : 0;
+	}
+
+	videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
+}
