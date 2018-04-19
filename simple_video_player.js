@@ -8,6 +8,28 @@ function initVideoPlayer() {
 	videoPlayer.controls = false;
 
 	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
+
+	videoPlayer.addEventListener('play', function() {
+		var playPauseButton = document.getElementById('play-pause-button');
+
+		setButtonType(playPauseButton, 'pause');
+	}, false);
+
+	videoPlayer.addEventListener('pause', function() {
+		var playPauseButton = document.getElementById('play-pause-button');
+
+		setButtonType(playPauseButton, 'play');
+	}, false);
+
+	videoPlayer.addEventListener('volumechange', function(ev) {
+		var muteButton = document.getElementById('mute-button');
+
+		if (videoPlayer.muted) {
+			setButtonType(muteButton, 'unmute');
+		} else {
+			setButtonType(muteButton, 'mute');
+		}
+	}, false);
 }
 
 function setButtonType(button, value) {
