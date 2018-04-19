@@ -29,3 +29,9 @@ function togglePlayPause() {
 		videoPlayer.pause();
 	}
 }
+
+function stopPlayer() {
+	videoPlayer.pause();
+
+	videoPlayer.currentTime = 0;
+}
