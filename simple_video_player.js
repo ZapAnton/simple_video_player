@@ -113,3 +113,27 @@ function updateProgressBar() {
 
 	progressBar.innerHTML = percentage + '% played';
 }
+
+function canPlayVideo(ext) {
+	var ableToPlay = videoPlayer.canPlayType('video/' + ext);
+
+	return ableToPlay != '';
+}
+
+function loadVideo() {
+	for (var i = 0; i < arguments.length; ++i) {
+		var fileName = arguments[i].split('.');
+
+		var ext = fileName[fileName.length - 1];
+
+		if (canPlayVideo(ext)) {
+			resetPlayer();
+
+			videoPlayer.src = arguments[i];
+
+			videoPlayer.load();
+
+			break;
+		}
+	}
+}
