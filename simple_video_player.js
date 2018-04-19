@@ -45,3 +45,17 @@ function changeVolume(direction) {
 
 	videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
 }
+
+function toggleMute() {
+	var muteButton = document.getElementById('mute-button');
+
+	if (videoPlayer.muted) {
+		setButtonType(muteButton, 'mute');
+
+		videoPlayer.muted = false;
+	} else {
+		setButtonType(muteButton, 'unmute');
+
+		videoPlayer.muted = true;
+	}
+}
