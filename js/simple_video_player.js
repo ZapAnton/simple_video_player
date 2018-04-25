@@ -137,3 +137,19 @@ function loadVideo() {
 		}
 	}
 }
+
+function goFullScreen() {
+	var madeFullscreen = document.getElementById('fullscreen-button');
+	if (madeFullscreen.mozRequestFullScreen)
+	{
+		madeFullscreen.mozRequestFullScreen();
+	}
+
+	else if
+	 (madeFullscreen.webkitRequestFullScreen) {
+		madeFullscreen.webkitRequestFullScreen();
+
+	}
+
+
+}
