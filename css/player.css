@@ -1,0 +1,58 @@
+
+
+#play-pause-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/play.png);
+}
+
+#stop-button {
+  height: 35px;
+  width: 35px;
+background-image: url(../fonts/stop.png);
+}
+
+#mute-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/mute.png);
+
+}
+
+#replay-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/replay.png);
+}
+
+#progress-bar {
+  margin-right: 10px;
+  width: 40%;
+}
+
+#volume-dec-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/minus.png);
+}
+
+#volume-inc-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/plus.png);
+}
+
+#fullscreen-button {
+  height: 35px;
+  width: 35px;
+  background-image: url(../fonts/fullscreen.png);
+}
+/* #fullscreen-button :-moz-full-screen {
+  height: 100%;
+  width: 100%;
+}
+
+#fullscreen-button :-webkit-full-screen {
+  height: 100%;
+  width: 100%;
+} */
