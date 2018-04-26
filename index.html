@@ -7,64 +7,63 @@
 		<script src="js/simple_video_player.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id='simple_video_player'>
-			<video id='media-video' controls>
-				<source type="video/mp4" src="data/test.mp4">
-			</video>
+		<div id='main'>
+			<div id='simple_video_player'>
+				<video id='media-video' controls>
+					<source type="video/mp4" src="data/test.mp4">
+				</video>
 
-			<div id='media-controls'>
-				<button id='replay-button' class='replay' title='replay'
-					onclick='replayVideo();'>
+				<div id='media-controls'>
+					<button id='replay-button' class='replay' title='replay'
+						onclick='replayVideo();'>
 
-				</button>
+					</button>
 
-				<button id='play-pause-button' class='play' title='play'
-					onclick='togglePlayPause();'>
+					<button id='play-pause-button' class='play' title='play'
+						onclick='togglePlayPause();'>
 
-				</button>
+					</button>
 
-				<button id='stop-button' class='stop' title='stop'
-					onclick='stopPlayer();'>
+					<button id='stop-button' class='stop' title='stop'
+						onclick='stopPlayer();'>
 
-				</button>
+					</button>
 
-				<progress id='progress-bar' min='0' max='100' value='0' onclick='goFullScreen'>
-					0% played
-				</progress>
+					<progress id='progress-bar' min='0' max='100' value='0' onclick='goFullScreen'>
+						0% played
+					</progress>
 
-				<button id='volume-inc-button' class='volume-plus' title='increase volume'
-					onclick='changeVolume("+");'>
+					<button id='volume-inc-button' class='volume-plus' title='increase volume'
+						onclick='changeVolume("+");'>
 
-				</button>
+					</button>
 
-				<button id='volume-dec-button' class='volume-minus' title='decrease volume'
-					onclick='changeVolume("-");'>
+					<button id='volume-dec-button' class='volume-minus' title='decrease volume'
+						onclick='changeVolume("-");'>
 
-				</button>
+					</button>
 
-				<button id='mute-button' class='mute' title='mute'
-					onclick='toggleMute();'>
+					<button id='mute-button' class='mute' title='mute'
+						onclick='toggleMute();'>
 
-				</button>
+					</button>
 
-				<button id='fullscreen-button' class='fullscreen' title='fullscreen'>
+					<button id='fullscreen-button' class='fullscreen' title='fullscreen'>
+					</button>
+				</div>
 
-			</button>
-			
+				<div id='media-play-list'>
+					<h2>Play list</h2>
+
+					<ul id='play-list'>
+						<li>
+							<span class='play-item' onclick='loadVideo("data/test.mp4");'>
+								test.mp4
+							</span>
+						</li>
+					</ul>
+				</div>
 			</div>
-
-			<div id='media-play-list'>
-				<h2>Play list</h2>
-
-				<ul id='play-list'>
-					<li>
-						<span class='play-item' onclick='loadVideo("data/test.mp4");'>
-							test.mp4
-						</span>
-					</li>
-				</ul>
-			</div>
-
 		</div>
 	</body>
 </html>
