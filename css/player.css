@@ -1,3 +1,30 @@
+html, body {
+	background: #003366;
+	height: 100%;
+	width: 100%;
+}
+
+#simple_video_player {
+	height: 50%;
+	width: 50%;
+	background: #a4d1f0;
+}
+
+#media-video {
+	object-fit: initial;
+	height: 400px;
+	width: 100%;
+	display: inline-block;
+}
+
+#media-controls {
+	background: yellow;
+}
+
+#media-play-list {
+	background: red;
+}
+
 #play-pause-button {
   height: 35px;
   width: 35px;
@@ -73,7 +100,7 @@
 }
 
 #play-list {
-  
+
 }
 /* #fullscreen-button :-moz-full-screen {
   height: 100%;

@@ -106,13 +106,13 @@ function replayVideo() {
 
 function updateProgressBar() {
 	var progressBar = document.getElementById('progress-bar');
-	var newProgessBar = document.getElementById('new-progress-bar');
+	var progressPercent = document.getElementById('progress-percent');
 	var percentage = Math.floor((100 / videoPlayer.duration) * videoPlayer.currentTime);
 
 	progressBar.value = percentage;
 
 	progressBar.innerHTML = percentage + '% played';
-	newProgessBar.innerHTML = percentage + '% played';
+	progressPercent .innerHTML = percentage + '% played';
 }
 
 function canPlayVideo(ext) {
