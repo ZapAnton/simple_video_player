@@ -9,7 +9,7 @@
 	<body>
 		<div id='simple_video_player'>
 			<video id='media-video' controls>
-				<source type="video/mp4" src="data/Hannigram.mp4">
+				<source type="video/mp4" src="data/test.mp4">
 			</video>
 
 
@@ -30,9 +30,10 @@
 
 				</button>
 
-				<progress id='progress-bar' min='0' max='100' value='0' onclick='goFullScreen'>
+				<progress id='progress-bar' min='0' max='100' value='0' onclick='updateProgressBar'>
 					0% played
 				</progress>
+				<div id='new-progress-bar' min='0' max='100' value='0'> </div>
 
 				<button id='volume-inc-button' class='volume-plus' title='increase volume'
 					onclick='changeVolume("+");'>
@@ -49,10 +50,10 @@
 
 				</button>
 
-				<button id='fullscreen-button' class='fullscreen' title='fullscreen'>
+				<button id='fullscreen-button' class='fullscreen' title='fullscreen' onclick="goFullScreen">
 
 			</button>
-			
+
 			</div>
 
 			<div id='media-play-list'>
@@ -60,8 +61,8 @@
 
 				<ul id='play-list'>
 					<li>
-						<span class='play-item' onclick='loadVideo("video/Hannigram.mp4");'>
-							Hannigram8==0
+						<span class='play-item' onclick='loadVideo("data/test.mp4");'>
+							test
 						</span>
 					</li>
 				</ul>
