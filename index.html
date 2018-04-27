@@ -36,7 +36,10 @@
 					<button id='volume-inc-button' class='volume-plus' title='increase volume'
 						onclick='changeVolume("+");'>
 
-					</button>
+				<progress id='progress-bar' min='0' max='100' value='0' onclick='updateProgressBar'>
+					0% played
+				</progress>
+				<div id='progress-percent' min='0' max='100' value='0'> </div>
 
 					<button id='volume-dec-button' class='volume-minus' title='decrease volume'
 						onclick='changeVolume("-");'>
@@ -48,22 +51,23 @@
 
 					</button>
 
-					<button id='fullscreen-button' class='fullscreen' title='fullscreen'>
-					</button>
-				</div>
+				<button id='fullscreen-button' class='fullscreen' title='fullscreen' onclick="goFullScreen"></button>
 
-				<div id='media-play-list'>
-					<h2>Play list</h2>
-
-					<ul id='play-list'>
-						<li>
-							<span class='play-item' onclick='loadVideo("data/test.mp4");'>
-								test.mp4
-							</span>
-						</li>
-					</ul>
-				</div>
 			</div>
+
+			<div id='media-play-list'>
+				<h2>Play list</h2>
+
+				<ul id='play-list'>
+					<li>
+						<span class='play-item' onclick='loadVideo("data/test.mp4");'>
+							test
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 		</div>
 	</body>
 </html>
