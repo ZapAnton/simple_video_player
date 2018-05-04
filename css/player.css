@@ -5,9 +5,10 @@ html, body {
 }
 
 #simple_video_player {
-	height: 50%;
-	width: 50%;
+	height: 500px;
+	width: 800px;
 	background: #a4d1f0;
+	margin: auto auto;
 }
 
 #media-video {
