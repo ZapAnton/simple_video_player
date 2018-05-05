@@ -4,6 +4,13 @@ html, body {
 	width: 100%;
 }
 
+button {
+  height: 35px;
+  width: 35px;
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
 #simple_video_player {
 	height: 500px;
 	width: 800px;
@@ -26,13 +33,6 @@ html, body {
 	background: red;
 }
 
-#play-pause-button {
-  height: 35px;
-  width: 35px;
-  border-radius: 8px;
-  opacity: 0.6;
-}
-
 .play {
 	background-image: url('../fonts/play.png');
 }
@@ -45,51 +45,29 @@ html, body {
 	background-image: url('../fonts/replay.png');
 }
 
-#stop-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/stop.png);
-  border-radius: 8px;
-  opacity: 0.6;
+.stop {
+	background-image: url('../fonts/stop.png');
 }
 
-#mute-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/mute.png);
-  border-radius: 8px;
-  opacity: 0.6;
+.mute, .unmute {
+	background-image: url('../fonts/mute.png');
+}
+
+.volume-minus {
+	background-image: url('../fonts/minus.png');
+}
+
+.volume-plus {
+	background-image: url('../fonts/plus.png');
+}
+
+.fullscreen {
+	background-image: url('../fonts/fullscreen.png');
 }
 
 #progress-bar {
   margin-right: 10px;
   width: 75%;
-  border-radius: 8px;
-  opacity: 0.6;
-
-}
-
-#volume-dec-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/minus.png);
-  border-radius: 8px;
-  opacity: 0.6;
-
-}
-
-#volume-inc-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/plus.png);
-  border-radius: 8px;
-  opacity: 0.6;
-}
-
-#fullscreen-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/fullscreen.png);
   border-radius: 8px;
   opacity: 0.6;
 }
