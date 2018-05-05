@@ -4,10 +4,20 @@ html, body {
 	width: 100%;
 }
 
+button {
+  height: 35px;
+  width: 35px;
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
 #simple_video_player {
-	height: 50%;
-	width: 50%;
-	background: #a4d1f0;
+	height: 500px;
+	width: 800px;
+	margin: auto auto;
+	border-style: solid;
+	border-width: medium;
+	border-color: black;
 }
 
 #media-video {
@@ -17,103 +27,49 @@ html, body {
 	display: inline-block;
 }
 
-#media-controls {
-
+.play {
+	background-image: url('../fonts/play.png');
 }
 
-#media-play-list {
-  background-color: aliceblue;
-  opacity: 0.7;
-
+.pause {
+	background-image: url('../fonts/pause.png');
 }
 
-
-#play-pause-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/play.png);
-  border-radius: 8px;
-  opacity: 0.7;
-
+.replay {
+	background-image: url('../fonts/replay.png');
 }
 
- 
-#stop-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/stop.png);
-  border-radius: 8px;
-  opacity: 0.7; 
-
-
+.stop {
+	background-image: url('../fonts/stop.png');
 }
 
-#mute-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/mute.png);
-  border-radius: 8px;
-  opacity: 0.7;
-
+.mute, .unmute {
+	background-image: url('../fonts/mute.png');
 }
 
-#replay-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/replay.png);
-  border-radius: 8px;
-  opacity: 0.7;
+.volume-minus {
+	background-image: url('../fonts/minus.png');
+}
+
+.volume-plus {
+	background-image: url('../fonts/plus.png');
+}
+
+.fullscreen {
+	background-image: url('../fonts/fullscreen.png');
+}
+
+#progress-bar-container {
+  width: 100%;
 
 }
 
 #progress-bar {
-  margin-right: 10px;
-  width: 75%;
-  border-radius: 8px;
-  opacity: 0.7;
+	width: 99%;
 
+	display: block;
+
+	margin-left: auto;
+
+	margin-right: auto;
 }
-
-#volume-dec-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/minus.png);
-  border-radius: 8px;
-  opacity: 0.7;
-
-}
-
-#volume-inc-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/plus.png);
-  border-radius: 8px;
-  opacity: 0.7;
-
-
-}
-
-#fullscreen-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/fullscreen.png);
-  border-radius: 8px;
-  opacity: 0.7;
-
-
-}
-
-#play-list {
-  background-color: aliceblue;
-  opacity: 0.7;
-}
-
-/* #fullscreen-button :-moz-full-screen {
-  height: 100%;
-  width: 100%;
-}
-
-#fullscreen-button :-webkit-full-screen {
-  height: 100%;
-  width: 100%;
-} */

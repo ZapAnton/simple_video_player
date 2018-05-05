@@ -13,12 +13,13 @@
 					<source type="video/mp4" src="data/test.mp4">
 				</video>
 
+				<div id='progress-bar-container'>
+					<progress id='progress-bar' min='0' max='100' value='0' onclick='updateProgressBar'>
+						0% played
+					</progress>
+				</div>
+
 				<div id='media-controls'>
-					<button id='replay-button' class='replay' title='replay'
-						onclick='replayVideo();'>
-
-					</button>
-
 					<button id='play-pause-button' class='play' title='play'
 						onclick='togglePlayPause();'>
 
@@ -29,17 +30,11 @@
 
 					</button>
 
-					<progress id='progress-bar' min='0' max='100' value='0' onclick='goFullScreen'>
-						0% played
-					</progress>
-
 					<button id='volume-inc-button' class='volume-plus' title='increase volume'
 						onclick='changeVolume("+");'>
+					</button>
 
-				<progress id='progress-bar' min='0' max='100' value='0' onclick='updateProgressBar'>
-					0% played
-				</progress>
-				<div id='progress-percent' min='0' max='100' value='0'> </div>
+					<div id='progress-percent' min='0' max='100' value='0'> </div>
 
 					<button id='volume-dec-button' class='volume-minus' title='decrease volume'
 						onclick='changeVolume("-");'>
@@ -51,23 +46,24 @@
 
 					</button>
 
-				<button id='fullscreen-button' class='fullscreen' title='fullscreen' onclick="goFullScreen"></button>
+					<button id='fullscreen-button' class='fullscreen' title='fullscreen'
+						onclick="goFullScreen();">
+					</button>
+				</div>
+				
+				<div id='media-play-list'>
+					<h2>Play list</h2>
+
+					<ul id='play-list'>
+						<li>
+							<span class='play-item' onclick='loadVideo("data/test.mp4");'>
+								test
+							</span>
+						</li>
+					</ul>
+				</div>
 
 			</div>
-
-			<div id='media-play-list'>
-				<h2>Play list</h2>
-
-				<ul id='play-list'>
-					<li>
-						<span class='play-item' onclick='loadVideo("data/test.mp4");'>
-							test
-						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-
 		</div>
 	</body>
 </html>

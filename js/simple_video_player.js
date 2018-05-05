@@ -1,42 +1,34 @@
 var videoPlayer;
 
-document.addEventListener("DOMContentLoaded", function() {initVideoPlayer();}, false);
+document.addEventListener("DOMContentLoaded", function() {initVideoPlayer();});
 
 function initVideoPlayer() {
 	videoPlayer = document.getElementById('media-video');
 
 	videoPlayer.controls = false;
 
-	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
+	videoPlayer.addEventListener('timeupdate', updateProgressBar);
 
-	videoPlayer.addEventListener('', function() {
+	videoPlayer.addEventListener('ended', function() {
 		var playPauseButton = document.getElementById('play-pause-button');
 
-		setButtonType(playPauseButton, '');
-	}, false);
-
-	videoPlayer.addEventListener('', function() {
-		var playPauseButton = document.getElementById('play-pause-button');
-
-		setButtonType(playPauseButton, '');
-	}, false);
+		setButtonType(playPauseButton, 'replay');
+	});
 
 	videoPlayer.addEventListener('volumechange', function(ev) {
 		var muteButton = document.getElementById('mute-button');
 
 		if (videoPlayer.muted) {
-			setButtonType(muteButton, '');
+			setButtonType(muteButton, 'mute');
 		} else {
-			setButtonType(muteButton, '');
+			setButtonType(muteButton, 'unmute');
 		}
-	}, false);
+	});
 }
 
 
 function setButtonType(button, value) {
 	button.title = value;
-
-	button.innerHTML = value;
 
 	button.className = value;
 }
@@ -46,11 +38,11 @@ function togglePlayPause() {
 	var button = document.getElementById('play-pause-button');
 
 	if (videoPlayer.paused || videoPlayer.ended) {
-		setButtonType(button, '')
+		setButtonType(button, 'pause');
 
 		videoPlayer.play();
 	} else {
-		setButtonType(button, '')
+		setButtonType(button, 'play');
 
 		videoPlayer.pause();
 	}
@@ -69,6 +61,10 @@ function stopPlayer() {
 	videoPlayer.pause();
 
 	videoPlayer.currentTime = 0;
+
+	playPauseButton = document.getElementById('play-pause-button');
+
+	setButtonType(playPauseButton, 'play');
 }
 
 
@@ -87,16 +83,17 @@ function toggleMute() {
 	var muteButton = document.getElementById('mute-button');
 
 	if (videoPlayer.muted) {
-		setButtonType(muteButton, '');
+		setButtonType(muteButton, 'unmute');
 
 		videoPlayer.muted = false;
 	} else {
-		setButtonType(muteButton, '');
+		setButtonType(muteButton, 'mute');
 
 		videoPlayer.muted = true;
 	}
 }
 
+<<<<<<< HEAD
 
 function resetPlayer() {
 	videoPlayer.currentTime = 0;
@@ -120,6 +117,8 @@ function replayVideo() {
 }
 
 
+=======
+>>>>>>> 2ebe27da5248c979403b3e22c4877bfb1bcf7f75
 function updateProgressBar() {
 	var progressBar = document.getElementById('progress-bar');
 	var progressPercent = document.getElementById('progress-percent');
