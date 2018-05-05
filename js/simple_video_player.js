@@ -1,41 +1,33 @@
 var videoPlayer;
 
-document.addEventListener("DOMContentLoaded", function() {initVideoPlayer();}, false);
+document.addEventListener("DOMContentLoaded", function() {initVideoPlayer();});
 
 function initVideoPlayer() {
 	videoPlayer = document.getElementById('media-video');
 
 	videoPlayer.controls = false;
 
-	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
+	videoPlayer.addEventListener('timeupdate', updateProgressBar);
 
 	videoPlayer.addEventListener('', function() {
 		var playPauseButton = document.getElementById('play-pause-button');
 
 		setButtonType(playPauseButton, '');
-	}, false);
-
-	videoPlayer.addEventListener('', function() {
-		var playPauseButton = document.getElementById('play-pause-button');
-
-		setButtonType(playPauseButton, '');
-	}, false);
+	});
 
 	videoPlayer.addEventListener('volumechange', function(ev) {
 		var muteButton = document.getElementById('mute-button');
 
 		if (videoPlayer.muted) {
-			setButtonType(muteButton, '');
+			setButtonType(muteButton, 'mute');
 		} else {
-			setButtonType(muteButton, '');
+			setButtonType(muteButton, 'unmute');
 		}
-	}, false);
+	});
 }
 
 function setButtonType(button, value) {
 	button.title = value;
-
-	button.innerHTML = value;
 
 	button.className = value;
 }
@@ -44,11 +36,11 @@ function togglePlayPause() {
 	var button = document.getElementById('play-pause-button');
 
 	if (videoPlayer.paused || videoPlayer.ended) {
-		setButtonType(button, '')
+		setButtonType(button, 'pause')
 
 		videoPlayer.play();
 	} else {
-		setButtonType(button, '')
+		setButtonType(button, 'play')
 
 		videoPlayer.pause();
 	}
@@ -74,11 +66,11 @@ function toggleMute() {
 	var muteButton = document.getElementById('mute-button');
 
 	if (videoPlayer.muted) {
-		setButtonType(muteButton, '');
+		setButtonType(muteButton, 'unmute');
 
 		videoPlayer.muted = false;
 	} else {
-		setButtonType(muteButton, '');
+		setButtonType(muteButton, 'mute');
 
 		videoPlayer.muted = true;
 	}
@@ -89,7 +81,7 @@ function resetPlayer() {
 
 	var playPauseButton = document.getElementById('play-pause-button');
 
-	setButtonType(playPauseButton, ' ')
+	setButtonType(playPauseButton, 'pause')
 
 	var progressBar = document.getElementById('progress-bar');
 
