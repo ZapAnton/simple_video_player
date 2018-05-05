@@ -34,11 +34,15 @@ html, body {
 }
 
 .play {
-	background-image: url(../fonts/play.png);
+	background-image: url('../fonts/play.png');
 }
 
 .pause {
-	background-image: url(../fonts/pause.png);
+	background-image: url('../fonts/pause.png');
+}
+
+.replay {
+	background-image: url('../fonts/replay.png');
 }
 
 #stop-button {
@@ -47,8 +51,6 @@ html, body {
   background-image: url(../fonts/stop.png);
   border-radius: 8px;
   opacity: 0.6;
-
-
 }
 
 #mute-button {
@@ -57,16 +59,6 @@ html, body {
   background-image: url(../fonts/mute.png);
   border-radius: 8px;
   opacity: 0.6;
-
-}
-
-#replay-button {
-  height: 35px;
-  width: 35px;
-  background-image: url(../fonts/replay.png);
-  border-radius: 8px;
-  opacity: 0.6;
-
 }
 
 #progress-bar {
@@ -92,8 +84,6 @@ html, body {
   background-image: url(../fonts/plus.png);
   border-radius: 8px;
   opacity: 0.6;
-
-
 }
 
 #fullscreen-button {
@@ -102,6 +92,4 @@ html, body {
   background-image: url(../fonts/fullscreen.png);
   border-radius: 8px;
   opacity: 0.6;
-
-
 }

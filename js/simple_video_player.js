@@ -9,10 +9,10 @@ function initVideoPlayer() {
 
 	videoPlayer.addEventListener('timeupdate', updateProgressBar);
 
-	videoPlayer.addEventListener('', function() {
+	videoPlayer.addEventListener('ended', function() {
 		var playPauseButton = document.getElementById('play-pause-button');
 
-		setButtonType(playPauseButton, '');
+		setButtonType(playPauseButton, 'replay');
 	});
 
 	videoPlayer.addEventListener('volumechange', function(ev) {
@@ -74,26 +74,6 @@ function toggleMute() {
 
 		videoPlayer.muted = true;
 	}
-}
-
-function resetPlayer() {
-	videoPlayer.currentTime = 0;
-
-	var playPauseButton = document.getElementById('play-pause-button');
-
-	setButtonType(playPauseButton, 'pause')
-
-	var progressBar = document.getElementById('progress-bar');
-
-	progressBar.value = 0;
-
-	progressBar.innerHTML = '0% played';
-}
-
-function replayVideo() {
-	resetPlayer();
-
-	videoPlayer.play();
 }
 
 function updateProgressBar() {
