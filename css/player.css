@@ -1,5 +1,5 @@
 html, body {
-	background: #003366;
+	background-image:url(../fonts/background.jpg);
 	height: 100%;
 	width: 100%;
 }
@@ -18,28 +18,32 @@ html, body {
 }
 
 #media-controls {
-	background: yellow;
+
 }
 
 #media-play-list {
-	background: red;
+  background-color: aliceblue;
+  opacity: 0.7;
+
 }
+
 
 #play-pause-button {
   height: 35px;
   width: 35px;
   background-image: url(../fonts/play.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 }
 
+ 
 #stop-button {
   height: 35px;
   width: 35px;
   background-image: url(../fonts/stop.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7; 
 
 
 }
@@ -49,7 +53,7 @@ html, body {
   width: 35px;
   background-image: url(../fonts/mute.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 }
 
@@ -58,7 +62,7 @@ html, body {
   width: 35px;
   background-image: url(../fonts/replay.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 }
 
@@ -66,7 +70,7 @@ html, body {
   margin-right: 10px;
   width: 75%;
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 }
 
@@ -75,7 +79,7 @@ html, body {
   width: 35px;
   background-image: url(../fonts/minus.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 }
 
@@ -84,7 +88,7 @@ html, body {
   width: 35px;
   background-image: url(../fonts/plus.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 
 }
@@ -94,14 +98,16 @@ html, body {
   width: 35px;
   background-image: url(../fonts/fullscreen.png);
   border-radius: 8px;
-  opacity: 0.6;
+  opacity: 0.7;
 
 
 }
 
 #play-list {
-
+  background-color: aliceblue;
+  opacity: 0.7;
 }
+
 /* #fullscreen-button :-moz-full-screen {
   height: 100%;
   width: 100%;

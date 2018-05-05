@@ -32,6 +32,7 @@ function initVideoPlayer() {
 	}, false);
 }
 
+
 function setButtonType(button, value) {
 	button.title = value;
 
@@ -39,6 +40,7 @@ function setButtonType(button, value) {
 
 	button.className = value;
 }
+
 
 function togglePlayPause() {
 	var button = document.getElementById('play-pause-button');
@@ -54,11 +56,21 @@ function togglePlayPause() {
 	}
 }
 
+// function changeLocale() {
+// 	var correntLocale = document.getElementById('play-pause-button');
+// 	if (videoPlayer.paused || videoPlayer.ended) {
+// 		document.getElementById('play-pause-button').style.background-Image="url(../fonts/play.png)";
+// 	} else {
+// 		document.getElementById('play-pause-button').style.background-image="url(../fonts/pause.png)";
+// 	}
+// }
+
 function stopPlayer() {
 	videoPlayer.pause();
 
 	videoPlayer.currentTime = 0;
 }
+
 
 function changeVolume(direction) {
 	if (direction === '+') {
@@ -69,6 +81,7 @@ function changeVolume(direction) {
 
 	videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
 }
+
 
 function toggleMute() {
 	var muteButton = document.getElementById('mute-button');
@@ -84,6 +97,7 @@ function toggleMute() {
 	}
 }
 
+
 function resetPlayer() {
 	videoPlayer.currentTime = 0;
 
@@ -98,11 +112,13 @@ function resetPlayer() {
 	progressBar.innerHTML = '0% played';
 }
 
+
 function replayVideo() {
 	resetPlayer();
 
 	videoPlayer.play();
 }
+
 
 function updateProgressBar() {
 	var progressBar = document.getElementById('progress-bar');
@@ -115,11 +131,13 @@ function updateProgressBar() {
 	progressPercent .innerHTML = percentage + '% played';
 }
 
+
 function canPlayVideo(ext) {
 	var ableToPlay = videoPlayer.canPlayType('video/' + ext);
 
 	return ableToPlay != '';
 }
+
 
 function loadVideo() {
 	for (var i = 0; i < arguments.length; ++i) {
