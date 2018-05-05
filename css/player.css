@@ -1,5 +1,4 @@
 html, body {
-	background: #003366;
 	height: 100%;
 	width: 100%;
 }
@@ -14,8 +13,10 @@ button {
 #simple_video_player {
 	height: 500px;
 	width: 800px;
-	background: #a4d1f0;
 	margin: auto auto;
+	border-style: solid;
+	border-width: medium;
+	border-color: black;
 }
 
 #media-video {
@@ -23,14 +24,6 @@ button {
 	height: 400px;
 	width: 100%;
 	display: inline-block;
-}
-
-#media-controls {
-	background: yellow;
-}
-
-#media-play-list {
-	background: red;
 }
 
 .play {
