@@ -58,9 +58,17 @@ button {
 	background-image: url('../fonts/fullscreen.png');
 }
 
+#progress-bar-container {
+  width: 100%;
+
+}
+
 #progress-bar {
-  margin-right: 10px;
-  width: 75%;
-  border-radius: 8px;
-  opacity: 0.6;
+	width: 99%;
+
+	display: block;
+
+	margin-left: auto;
+
+	margin-right: auto;
 }
