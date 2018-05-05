@@ -36,11 +36,11 @@ function togglePlayPause() {
 	var button = document.getElementById('play-pause-button');
 
 	if (videoPlayer.paused || videoPlayer.ended) {
-		setButtonType(button, 'pause')
+		setButtonType(button, 'pause');
 
 		videoPlayer.play();
 	} else {
-		setButtonType(button, 'play')
+		setButtonType(button, 'play');
 
 		videoPlayer.pause();
 	}
@@ -50,6 +50,10 @@ function stopPlayer() {
 	videoPlayer.pause();
 
 	videoPlayer.currentTime = 0;
+
+	playPauseButton = document.getElementById('play-pause-button');
+
+	setButtonType(playPauseButton, 'play');
 }
 
 function changeVolume(direction) {
