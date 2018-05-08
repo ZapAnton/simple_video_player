@@ -48,14 +48,6 @@ function togglePlayPause() {
 	}
 }
 
-// function changeLocale() {
-// 	var correntLocale = document.getElementById('play-pause-button');
-// 	if (videoPlayer.paused || videoPlayer.ended) {
-// 		document.getElementById('play-pause-button').style.background-Image="url(../fonts/play.png)";
-// 	} else {
-// 		document.getElementById('play-pause-button').style.background-image="url(../fonts/pause.png)";
-// 	}
-// }
 
 function stopPlayer() {
 	videoPlayer.pause();
@@ -93,32 +85,6 @@ function toggleMute() {
 	}
 }
 
-<<<<<<< HEAD
-
-function resetPlayer() {
-	videoPlayer.currentTime = 0;
-
-	var playPauseButton = document.getElementById('play-pause-button');
-
-	setButtonType(playPauseButton, ' ')
-
-	var progressBar = document.getElementById('progress-bar');
-
-	progressBar.value = 0;
-
-	progressBar.innerHTML = '0% played';
-}
-
-
-function replayVideo() {
-	resetPlayer();
-
-	videoPlayer.play();
-}
-
-
-=======
->>>>>>> 2ebe27da5248c979403b3e22c4877bfb1bcf7f75
 function updateProgressBar() {
 	var progressBar = document.getElementById('progress-bar');
 	var progressPercent = document.getElementById('progress-percent');
