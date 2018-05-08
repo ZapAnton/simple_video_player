@@ -7,7 +7,7 @@ html, body {
 button {
   height: 35px;
   width: 35px;
-  border-radius: 8px;
+  border-radius: 20px;
   opacity: 0.6;
 }
 
@@ -33,11 +33,11 @@ button {
 }
 
 .play {
-	background-image: url('../fonts/play.png');
+	background-image: url('../fonts/new_buttons_play.png');
 }
 
 .pause {
-	background-image: url('../fonts/pause.png');
+	background-image: url('../fonts/new_buttons_pause.png');
 }
 
 .replay {
@@ -45,11 +45,11 @@ button {
 }
 
 .stop {
-	background-image: url('../fonts/stop.png');
+	background-image: url('../fonts/new_buttons_stop.png');
 }
 
 .mute, .unmute {
-	background-image: url('../fonts/mute.png');
+	background-image: url('../fonts/new_buttons_mute.png');
 }
 
 .volume-minus {
@@ -61,7 +61,7 @@ button {
 }
 
 .fullscreen {
-	background-image: url('../fonts/fullscreen.png');
+	background-image: url('../fonts/new_buttons_fullscreen.png');
 }
 
 #progress-bar-container {
