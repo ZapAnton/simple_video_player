@@ -4,11 +4,17 @@ html, body {
 	width: 100%;
 }
 
-button {
-  height: 35px;
-  width: 35px;
-  border-radius: 20px;
-  opacity: 0.6;
+.butt {
+	align-self: center;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	margin: 10px;
+ 	padding: 4px 7px;
+ 	text-align: left;
+ 	font-size: 35px;
+	line-height: 30px;
+	visibility: hidden;
 }
 
 #simple_video_player {
@@ -27,42 +33,52 @@ button {
 }
 
 #media-video {
-	object-fit: initial;
+	/* object-fit: initial; */
 	height: 400px;
 	width: 100%;
 	display: inline-block;
 }
 
 .play {
-	background-image: url('../fonts/new_buttons_play.png');
+	font-size: 25px;
+	text-align: center;
+	border-radius: 20px;
 }
 
+
 .pause {
-	background-image: url('../fonts/new_buttons_pause.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .replay {
-	background-image: url('../fonts/new_buttons_replay .png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .stop {
-	background-image: url('../fonts/new_buttons_stop.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .mute, .unmute {
-	background-image: url('../fonts/new_buttons_mute.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .volume-minus {
-	background-image: url('../fonts/minus.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .volume-plus {
-	background-image: url('../fonts/plus.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 .fullscreen {
-	background-image: url('../fonts/new_buttons_fullscreen.png');
+	font-size: 35px;
+	text-align: center;
 }
 
 #progress-bar-container {
@@ -74,6 +90,8 @@ button {
   
 
 }
+
+#progress-
 
 #progress-bar {
 	width: 99%;
